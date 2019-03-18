@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Start from './components/start';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    constructor(props){
+      super(props);
+      this.state = {
+        formIndex: 0,
+      };
+    }
+    prevForm(){
+      if(this.state.formIndex < 0){
+        this.setState({formIndex: this.state.formIndex-1})
+      }
+    };
+    nextForm(){
+      if(this.state.formIndex < 7){
+        this.setState({formIndex: this.state.formIndex+1})
+      }
+    }
+    render() {
+      switch(this.state.formIndex){
+        case 0:
+        return(
+          <Start/>
+        )
+        default:
+        return(
+          <Start/>
+        )
+      }
   }
 }
 

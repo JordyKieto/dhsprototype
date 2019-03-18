@@ -5,7 +5,7 @@ var userSchema = mongoose.Schema({
     lastName: { type: String, required: true },
     phoneNumber: { type: String, required: true }, 
     familySize: { type: Number, required: true },
-    dependant: { type: Schema.Types.Mixed, required: false },
+    dependant: { type: mongoose.Schema.Types.Mixed, required: false },
     education: { type: String, required: true },
 });
 module.exports = mongoose.model('User', userSchema)
