@@ -1,5 +1,13 @@
 let nextId = 0;
 
+export const formNext = () =>({
+    type: 'FORM_NEXT'
+});
+
+export const formPrevious = () =>({
+    type: 'FORM_PREVIOUS'
+});
+
 export const setId = (text) =>({
     type: 'SET_ID',
     id: nextId++
@@ -30,7 +38,12 @@ export const setFamilySize = (text) =>({
     text
 });
 
-export const setDependants = (text) =>({
-    type: 'SET_DEPENDANTS',
+export const setDependant = (text) =>({
+    type: 'SET_DEPENDANT',
+    text
+});
+
+export const setEducation = (text) =>({
+    type: 'SET_EDUCATION',
     text
 });

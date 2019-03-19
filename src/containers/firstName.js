@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setFirstName } from '../actions'
 
-const setName = ({ dispatch }) => {
-  let input
+const setFirst = ({ dispatch }) => {
+  let input;
 
   return (
     <div>
@@ -19,10 +19,10 @@ const setName = ({ dispatch }) => {
         }}
       >
         <input ref={node => (input = node)} />
-        <button type="submit">Okay got it!</button>
+        <button type="submit">SAVE RESULTS!</button>
       </form>
     </div>
   )
 }
 
-export default connect()(setName)
+export default connect()(setFirst);

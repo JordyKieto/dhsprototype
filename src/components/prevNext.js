@@ -1,13 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { formPrevious, formNext } from '../actions'
 
-const prevNext = (props)=>{
+const prev = require('../left-arrow.png');
+const next = require('../right-arrow.png');
+
+const prevNext = ({ dispatch }) =>{
     return(
-        <img src="https://banner2.kisspng.com/20180320/jae/kisspng-computer-icons-arrow-download-right-arrow-blue-png-5ab0cb79dd6221.6924179815215358659068.jpg"
-            onClick={props.prevNext}
-            alt="previous"
-        >
-        </img>
+        <>
+            <button>
+                <img src={prev}
+                    alt="previous"
+                    onClick={()=>{dispatch(formPrevious())}}
+                >
+                </img>
+            </button>
+            <button>
+                <img src={next}
+                    alt="next"
+                    onClick={()=>{dispatch(formNext())}}
+                >
+                </img>
+            </button>
+        </>
     )
 };
 
-export default prevNext;
+export default connect()(prevNext);
