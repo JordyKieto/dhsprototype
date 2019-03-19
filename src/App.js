@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+
 import './App.css';
-import Start from './components/start';
+// import Start from './components/start';
+
+import SetFirstName from './containers/setName';
+import GetName from './containers/getName';
+
+
+
 
 class App extends Component {
     constructor(props){
@@ -9,25 +16,19 @@ class App extends Component {
         formIndex: 0,
       };
     }
-    prevForm(){
-      if(this.state.formIndex < 0){
-        this.setState({formIndex: this.state.formIndex-1})
-      }
-    };
-    nextForm(){
-      if(this.state.formIndex < 7){
-        this.setState({formIndex: this.state.formIndex+1})
-      }
-    }
     render() {
       switch(this.state.formIndex){
         case 0:
         return(
-          <Start/>
-        )
+          <SetFirstName/>
+        );
+        case 1:
+        return(
+          <GetName/>
+        );
         default:
         return(
-          <Start/>
+          <SetFirstName/>
         )
       }
   }

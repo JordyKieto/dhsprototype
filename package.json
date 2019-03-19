@@ -28,7 +28,9 @@
   "devDependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.19"
+    "mongoose": "^5.4.19",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
   },
   "proxy": "http://localhost:8080",
   "author": "",
